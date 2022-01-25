@@ -3,8 +3,8 @@ variable "name" {
   default = "test"
 }
 variable "instance_type" {
-	type = string
-	default = "Standard_DS1_v2"
+  type    = string
+  default = "Standard_DS1_v2"
 }
 
 variable "densify_recommendations" {
@@ -21,15 +21,15 @@ variable "densify_recommendations" {
       predictedUptime          = "83.4"
       reservedInstanceCoverage = "no"
     }
-	// 	not-test = {
-  //     recommendedType          = "Standard_DS2_v2"
-  //     currentType              = "Standard_DS1_v2"
-  //     approvalType             = "all"
-  //     savingsEstimate          = "31.43"
-  //     predictedUptime          = "83.4"
-  //     reservedInstanceCoverage = "no"
-  //   }
-	// default = {
+    // 	not-test = {
+    //     recommendedType          = "Standard_DS2_v2"
+    //     currentType              = "Standard_DS1_v2"
+    //     approvalType             = "all"
+    //     savingsEstimate          = "31.43"
+    //     predictedUptime          = "83.4"
+    //     reservedInstanceCoverage = "no"
+    //   }
+    // default = {
 
   }
 }

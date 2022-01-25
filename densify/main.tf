@@ -14,6 +14,9 @@ module "densify" {
 resource "azurerm_resource_group" "test" {
   name     = "testRG"
   location = "West US 2"
+  tags = {
+    environment = "test"
+  }
 }
 
 resource "azurerm_virtual_network" "test" {
@@ -21,6 +24,9 @@ resource "azurerm_virtual_network" "test" {
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.test.location
   resource_group_name = azurerm_resource_group.test.name
+  tags = {
+    environment = "test"
+  }
 }
 
 resource "azurerm_subnet" "test" {
@@ -62,7 +68,7 @@ resource "azurerm_virtual_machine" "test" {
 
   # new self-optimizing instance type from Densify
   #vm_size = module.densify.instance_type
-  vm_size = var.instance_type
+  vm_size                          = var.instance_type
   delete_os_disk_on_termination    = true
   delete_data_disks_on_termination = true
 
@@ -99,5 +105,6 @@ resource "azurerm_virtual_machine" "test" {
     Densify-predicted-uptime          = module.densify.predicted_uptime
     #Should match the densify_unique_id value as this is how Densify references the system as unique
     Densify-Unique-ID = var.name
+    environment       = "test"
   }
 }
