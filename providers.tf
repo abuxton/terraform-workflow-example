@@ -16,6 +16,6 @@ terraform {
   }
 }
 
-provider "random" {
-  # Configuration options
-}
+// provider "random" {
+//   # Configuration options
+// }
