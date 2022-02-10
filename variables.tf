@@ -1,3 +1,1 @@
-variable "random_prefix" {
-  type = string
-}
+variable "random_prefix" {}
