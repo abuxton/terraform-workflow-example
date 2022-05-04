@@ -4,7 +4,7 @@ module "this" {
 }
 
 module "env" {
-  source = "../.."
+  source  = "app.terraform.io/abc-vdm/env/tfx"
   version = "0.1.3"
   ATLAS_ADDRESS                                 = var.ATLAS_ADDRESS
   ATLAS_CONFIGURATION_NAME                      = var.ATLAS_CONFIGURATION_NAME
