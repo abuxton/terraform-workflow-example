@@ -1,2 +1,2 @@
-random_prefix = "test55"
+random_prefix = "test2"
 

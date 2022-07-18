@@ -5,7 +5,7 @@ terraform {
     organization = "abc-vdm"
 
     workspaces {
-      name = "workflow-example"
+      name = "test-cli-workflow"
     }
   }
 
