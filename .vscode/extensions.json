@@ -1,7 +1,9 @@
 {
   "recommendations": [
+    "hashicorp.hcl",
     "hashicorp.sentinel",
     "hashicorp.terraform",
+    "hashicorp.terraform-preview",
     "Mindginative.terraform-snippets",
     "ms-vscode.azure-account",
     "Run-at-scale.terraform-doc-snippets",
