@@ -1,5 +1,12 @@
 # Configure the Azure provider
 terraform {
+  cloud {
+    organization = "abc-vdm"
+
+    workspaces {
+      name = "playpen-randomstring"
+    }
+  }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
