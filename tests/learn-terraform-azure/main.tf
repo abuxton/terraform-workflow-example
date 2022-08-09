@@ -18,7 +18,7 @@ resource "azurerm_subnet" "sn" {
   address_prefixes     = ["10.0.2.0/24"]
 }
 
-resource "azurerm_network_interface" "example" {
+resource "azurerm_network_interface" "ni" {
   name                = "example-nic"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
@@ -30,14 +30,15 @@ resource "azurerm_network_interface" "example" {
   }
 }
 resource "azurerm_linux_virtual_machine" "lvm" {
-  name                = "example-machine"
-  resource_group_name = azurerm_resource_group.rg.name
-  location            = azurerm_resource_group.rg.location
-  size                = "Standard_F2"
-  admin_username      = "adminuser"
-  admin_password      = "password!"
+  name                            = "example-machine"
+  resource_group_name             = azurerm_resource_group.rg.name
+  location                        = azurerm_resource_group.rg.location
+  size                            = "Standard_F2"
+  admin_username                  = "adminuser"
+  admin_password                  = "password!"
+  disable_password_authentication = false
   network_interface_ids = [
-    azurerm_network_interface.example.id,
+    azurerm_network_interface.ni.id,
   ]
 
   # admin_ssh_key {
