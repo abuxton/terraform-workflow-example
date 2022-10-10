@@ -4,7 +4,7 @@ terraform {
     organization = "abc-vdm"
 
     workspaces {
-      name = "playpen-randomstring"
+      name = "tf-cli-workspace"
     }
   }
   required_providers {
