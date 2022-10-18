@@ -4,7 +4,7 @@ terraform {
     organization = "abc-vdm"
 
     workspaces {
-      name = "tf-cli-workspace"
+      name = "terraform-workflow-example"
     }
   }
   required_providers {
