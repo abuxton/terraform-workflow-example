@@ -14,5 +14,5 @@ provider "environment" {
 data "environment_variables" "all" {} 
 
 output "environment"{
-value = data.environment_variables
+value = data.environment_variables.all
 }
