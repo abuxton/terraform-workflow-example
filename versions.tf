@@ -1,7 +1,7 @@
 
 terraform {
   cloud {
-    organization = "abc-vdm"
+    organization = "abc-vmp"
 
     workspaces {
       name = "terraform-workflow-example"
