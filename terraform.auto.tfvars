@@ -1,1 +1,1 @@
-random_prefix = "prefix-branch2"
+random_prefix = "test2"
