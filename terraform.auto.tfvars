@@ -1,1 +1,1 @@
-random_prefix = "test777"
+random_prefix = "ECB-TEST99"
